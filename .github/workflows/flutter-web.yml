@@ -3,7 +3,7 @@ name: Deploy Flutter Web to GitHub Pages
 on:
   push:
     branches:
-      - main  # Se ejecuta cuando hagas push en main
+      - main
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0' # Usa tu versión de Flutter
+          flutter-version: '3.24.3'   # Esta versión trae Dart 3.9.x
 
       - name: Install dependencies
         run: flutter pub get
