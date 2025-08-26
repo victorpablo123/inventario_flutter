@@ -3,19 +3,20 @@ name: Deploy Flutter Web to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Se ejecuta cuando hagas push en main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3' # pon tu versión de flutter (cambia si es distinta)
+          flutter-version: '3.19.0' # Usa tu versión de Flutter
 
       - name: Install dependencies
         run: flutter pub get
